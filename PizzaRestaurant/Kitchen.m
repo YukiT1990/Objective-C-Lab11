@@ -19,8 +19,11 @@
         shouldUpgrade = [_delegate kitchenShouldUpgradeOrder:self.delegate];
         if (shouldUpgrade) {
             [_delegate kitchen:self.delegate shouldMakePizzaOfSize:large andToppings:toppings];
+            newPizza = [[Pizza alloc] initWithSize:large toppings:toppings];
+        } else {
+            newPizza = [[Pizza alloc] initWithSize:size toppings:toppings];
         }
-        newPizza = [[Pizza alloc] initWithSize:size toppings:toppings];
+        
         if ([self.delegate respondsToSelector:@selector(kitchenDidMakePizza:)]) {
             [_delegate kitchenDidMakePizza:newPizza];
         }

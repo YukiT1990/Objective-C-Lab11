@@ -11,6 +11,8 @@
 		6001EC84197B4EC300F97011 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001EC83197B4EC300F97011 /* main.m */; };
 		6001EC90197B502F00F97011 /* Kitchen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001EC8F197B502F00F97011 /* Kitchen.m */; };
 		613D4AE925EDDE160098EE28 /* Pizza.m in Sources */ = {isa = PBXBuildFile; fileRef = 613D4AE825EDDE160098EE28 /* Pizza.m */; };
+		614F2ED325F20E8F0029F325 /* ManagerHatingAnchovies.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F2ED225F20E8F0029F325 /* ManagerHatingAnchovies.m */; };
+		614F2ED825F214680029F325 /* ManagerBeingCheery.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F2ED725F214680029F325 /* ManagerBeingCheery.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +37,10 @@
 		613D4AE725EDDE160098EE28 /* Pizza.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pizza.h; sourceTree = "<group>"; };
 		613D4AE825EDDE160098EE28 /* Pizza.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pizza.m; sourceTree = "<group>"; };
 		614F2ECC25F208C10029F325 /* KitchenDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KitchenDelegate.h; sourceTree = "<group>"; };
+		614F2ED125F20E8F0029F325 /* ManagerHatingAnchovies.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManagerHatingAnchovies.h; sourceTree = "<group>"; };
+		614F2ED225F20E8F0029F325 /* ManagerHatingAnchovies.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManagerHatingAnchovies.m; sourceTree = "<group>"; };
+		614F2ED625F214680029F325 /* ManagerBeingCheery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManagerBeingCheery.h; sourceTree = "<group>"; };
+		614F2ED725F214680029F325 /* ManagerBeingCheery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManagerBeingCheery.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,10 @@
 				613D4AE825EDDE160098EE28 /* Pizza.m */,
 				614F2ECC25F208C10029F325 /* KitchenDelegate.h */,
 				6001EC85197B4EC300F97011 /* Supporting Files */,
+				614F2ED125F20E8F0029F325 /* ManagerHatingAnchovies.h */,
+				614F2ED225F20E8F0029F325 /* ManagerHatingAnchovies.m */,
+				614F2ED625F214680029F325 /* ManagerBeingCheery.h */,
+				614F2ED725F214680029F325 /* ManagerBeingCheery.m */,
 			);
 			path = PizzaRestaurant;
 			sourceTree = "<group>";
@@ -149,6 +159,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				613D4AE925EDDE160098EE28 /* Pizza.m in Sources */,
+				614F2ED325F20E8F0029F325 /* ManagerHatingAnchovies.m in Sources */,
+				614F2ED825F214680029F325 /* ManagerBeingCheery.m in Sources */,
 				6001EC90197B502F00F97011 /* Kitchen.m in Sources */,
 				6001EC84197B4EC300F97011 /* main.m in Sources */,
 			);

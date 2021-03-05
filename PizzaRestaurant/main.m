@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "Kitchen.h"
 #import "Pizza.h"
+#import "ManagerHatingAnchovies.h"
+#import "ManagerBeingCheery.h"
 
 int main(int argc, const char * argv[])
 {
@@ -18,6 +20,8 @@ int main(int argc, const char * argv[])
         NSLog(@"Please pick your pizza size and toppings:");
         
         Kitchen *restaurantKitchen = [Kitchen new];
+        ManagerHatingAnchovies *Nick = [ManagerHatingAnchovies new];
+        ManagerBeingCheery *Bob = [ManagerBeingCheery new];
         
         
         while (TRUE) {
@@ -36,6 +40,13 @@ int main(int argc, const char * argv[])
             NSArray *commandWords = [inputString componentsSeparatedByString:@" "];
             NSString *keyword = commandWords[0];
             
+            NSLog(@"Who is the manager?");
+            NSLog(@"> ");
+            fgets (str, 100, stdin);
+            NSString *inputStringForManager = [[NSString alloc] initWithUTF8String:str];
+            inputStringForManager = [inputStringForManager stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            NSLog(@"The manager is %@.", inputStringForManager);
+            
             Pizza *pizza;
             if ([keyword isEqualToString:@"pepperoni"]) {
                 pizza = [Pizza largePepperoni];
@@ -44,12 +55,24 @@ int main(int argc, const char * argv[])
                 // And then send some message to the kitchen...
                 PizzaSize size = [Pizza sizeFromString:keyword];
                 NSArray *toppings = [commandWords subarrayWithRange:NSMakeRange(1, commandWords.count - 1)];
-                pizza = [[Pizza alloc] initWithSize:size toppings:toppings];
+                
+                if ([inputStringForManager isEqualToString:@"Nick"]) {
+                    restaurantKitchen.delegate = Nick;
+                    pizza = [restaurantKitchen makePizzaWithSize:size toppings:toppings];
+                } else if ([inputStringForManager isEqualToString:@"Bob"]) {
+                    restaurantKitchen.delegate = Bob;
+                    pizza = [restaurantKitchen makePizzaWithSize:size toppings:toppings];
+                } else {
+                    pizza = [[Pizza alloc] initWithSize:size toppings:toppings];
+                }
             }
             
-            NSLog(@"Here is a %@.", pizza);
+            if (pizza) {
+                NSLog(@"Here is a %@.", pizza);
+            } else {
+                NSLog(@"%@ refused to make this pizza.", inputStringForManager);
+            }
         }
-
     }
     return 0;
 }
