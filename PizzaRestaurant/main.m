@@ -20,8 +20,8 @@ int main(int argc, const char * argv[])
         NSLog(@"Please pick your pizza size and toppings:");
         
         Kitchen *restaurantKitchen = [Kitchen new];
-        ManagerHatingAnchovies *Nick = [ManagerHatingAnchovies new];
-        ManagerBeingCheery *Bob = [ManagerBeingCheery new];
+        ManagerHatingAnchovies *Nick;
+        ManagerBeingCheery *Bob;
         
         
         while (TRUE) {
@@ -57,9 +57,11 @@ int main(int argc, const char * argv[])
                 NSArray *toppings = [commandWords subarrayWithRange:NSMakeRange(1, commandWords.count - 1)];
                 
                 if ([inputStringForManager isEqualToString:@"Nick"]) {
+                    Nick = [ManagerHatingAnchovies new];
                     restaurantKitchen.delegate = Nick;
                     pizza = [restaurantKitchen makePizzaWithSize:size toppings:toppings];
                 } else if ([inputStringForManager isEqualToString:@"Bob"]) {
+                    Bob = [ManagerBeingCheery new];
                     restaurantKitchen.delegate = Bob;
                     pizza = [restaurantKitchen makePizzaWithSize:size toppings:toppings];
                 } else {
