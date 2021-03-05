@@ -77,16 +77,4 @@
     return self;
 }
 
-- (BOOL)kitchen:(id)kitchen shouldMakePizzaOfSize:(id)size andToppings:(NSArray *)toppings { 
-    <#code#>
-}
-
-- (BOOL)kitchenShouldUpgradeOrder:(id)kitchen { 
-    <#code#>
-}
-
-- (void)kitchenDidMakePizza:(id)pizza {
-    <#code#>
-}
-
 @end

@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Kitchen.h"
 
 typedef enum {
     small,
@@ -15,7 +14,7 @@ typedef enum {
     large,
 } PizzaSize;
 
-@interface Pizza : NSObject <KitchenDelegate>;
+@interface Pizza : NSObject
 
 @property PizzaSize size;
 @property NSArray *toppings;
